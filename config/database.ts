@@ -30,7 +30,7 @@ export default ({ env }) => {
         user: env('DATABASE_USERNAME', 'rose_database_user'),  // Nom d'utilisateur
         password: env('DATABASE_PASSWORD', 'HAtwnaXs8vV51Z049ySKAnLbPORJTeYV'),  // Mot de passe
         ssl: env.bool('DATABASE_SSL', true) && {  // Utilisation du SSL pour la connexion
-          rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
+          rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', false),
         },
         schema: env('DATABASE_SCHEMA', 'public'),  // Utilisation du schéma 'public' par défaut
       },
