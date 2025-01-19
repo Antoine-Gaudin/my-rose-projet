@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produits",
+  "info": {
+    "singularName": "produit",
+    "pluralName": "produits",
+    "displayName": "produit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "souscategories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::souscategorie.souscategorie",
+      "mappedBy": "produits"
+    },
+    "urlphoto": {
+      "type": "text"
+    },
+    "urlpdf": {
+      "type": "text"
+    },
+    "order": {
+      "type": "biginteger"
+    }
+  }
+}

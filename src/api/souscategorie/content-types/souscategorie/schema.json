@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "souscategories",
+  "info": {
+    "singularName": "souscategorie",
+    "pluralName": "souscategories",
+    "displayName": "Souscategorie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::categorie.categorie",
+      "mappedBy": "souscategories"
+    },
+    "produits": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::produit.produit",
+      "inversedBy": "souscategories"
+    },
+    "urlfond": {
+      "type": "text"
+    }
+  }
+}
